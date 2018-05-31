@@ -19,6 +19,6 @@ printenv CATPI_API_DATABASE_PASSWORD
 #### Create db schema
 
 ```
-rails db:migrate
+# rails db:migrate or rake db:drop db:create db:migrate if having issues
 rake db:reset db:migrate
 ```

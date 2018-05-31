@@ -8,7 +8,7 @@
 
 Event.destroy_all
 
-Event.create([
+events = Event.create([
     {
         feed_amount: 0,
         event_time: DateTime.strptime("05/01/2018 17:00", "%m/%d/%Y %H:%M"),
@@ -17,3 +17,14 @@ Event.create([
 ])
 
 p "Created #{Event.count} Events"
+
+Image.destroy_all
+
+images = Image.create([
+    {
+        file_name: "test.jpg",
+        event: events.first
+    }
+])
+
+p "Created #{Image.count} Images"

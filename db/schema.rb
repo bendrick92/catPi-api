@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(version: 20180531000731) do
 
   create_table "images", force: :cascade do |t|
     t.string "file_name"
+    t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_images_on_event_id"
   end
 
 end
