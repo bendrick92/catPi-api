@@ -2,6 +2,7 @@ json.ignore_nil!
 
 json.events @events do |event|
     json.id             event.id
+    json.user_id        event.user_id
     json.feed_amount    event.feed_amount
     json.event_time     event.event_time
     json.has_run        event.has_run
